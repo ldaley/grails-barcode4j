@@ -1,0 +1,16 @@
+<plugin name='barcode4j' version='0.1' grailsVersion='1.1.1 &gt; *'>
+  <author>Tomasz Bandura</author>
+  <authorEmail>tomasz.bandura@gmail.com</authorEmail>
+  <title>Barcode4j plugin</title>
+  <description>\
+This plugin provides functionality of generating barcodes.
+</description>
+  <documentation>http://grails.org/Barcode4j+Plugin</documentation>
+  <resources>
+    <resource>Barcode4jController</resource>
+    <resource>BarcodeTagLib</resource>
+    <resource>UrlMappings</resource>
+    <resource>DataSource</resource>
+  </resources>
+  <dependencies />
+</plugin>

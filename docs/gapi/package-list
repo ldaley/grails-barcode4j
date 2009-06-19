@@ -1,0 +1,9 @@
+DefaultPackage
+grails-app.conf
+grails-app.controllers
+grails-app.taglib
+scripts
+unzipped
+unzipped.grails-app.controllers
+unzipped.grails-app.taglib
+unzipped.scripts
