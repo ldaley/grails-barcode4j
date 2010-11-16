@@ -8,7 +8,7 @@ The plugin provides the `barcode4jService`. This service has methods for renderi
 
 ### Generator Instances
 
-For example, to generate a barcode to a ONG file using the [`Code39`](http://en.wikipedia.org/wiki/Code_39 "Code 39 - Wikipedia, the free encyclopedia") scheme you would do…
+For example, to generate a barcode to a PNG file using the [`Code39`](http://en.wikipedia.org/wiki/Code_39 "Code 39 - Wikipedia, the free encyclopedia") scheme you would do…
 
     import org.krysalis.barcode4j.impl.code39.Code39Bean
         
