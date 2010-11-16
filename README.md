@@ -123,3 +123,7 @@ The primary reason for this is to allow you as the developer to control access t
 ## Help / Support
 
 Please raise issues on the Grails user mailing list.
+
+## Licensing
+
+[ASL 2.0](http://www.apache.org/licenses/LICENSE-2.0.html "Apache License, Version 2.0")
