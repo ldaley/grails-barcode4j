@@ -2,3 +2,5 @@
 *.xml
 *.zip
 target
+.DS_Store
+grails-barcode4j-*
