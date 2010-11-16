@@ -32,7 +32,8 @@ class Barcode4jGrailsPlugin {
 	
 	def pluginExcludes = [
 		"**/grails/plugin/barcode4j/test/**/*",
-		"grails-app/conf/resources.groovy"
+		"grails-app/conf/resources.groovy",
+		"web-app/**/*"
 	]
 
 	def observe = [
