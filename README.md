@@ -98,7 +98,7 @@ For example:
 
     renderBarcodePng("code39Generator", barcodeValue, [antiAlias: true])
 
-#### Parameters
+The parameters that are available…
 
 #### dpi (type: `int`, default instance var name: `defaultDpi`, default value: `150`)
 
