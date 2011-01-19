@@ -26,7 +26,7 @@ class Barcode4jGrailsPlugin {
 	def description = 'Provides the generation of barcodes, using the Barcode4j library'
 	def documentation = "http://www.grails.org/plugin/barcode4j"
 	
-	def version = "0.2"
+	def version = "0.2.1"
 	def grailsVersion = "1.2 > *"
 	def dependsOn = [:]
 	
