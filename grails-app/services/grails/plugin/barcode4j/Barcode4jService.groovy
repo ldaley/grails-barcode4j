@@ -60,6 +60,15 @@ class Barcode4jService {
 		render(getGenerator(generatorName), msg, response.outputStream, mimeType, params)
 	}
 	
+	byte[] render(String generatorName, String msg, String mimeType, Map params = [:]) {
+		render(getGenerator(generatorName), msg, mimeType, params)
+	}
+
+	byte[] render(BarcodeGenerator generator, String msg, String mimeType, Map params = [:]) {
+		def baos = new ByteArrayOutputStream()
+		render(generator, msg, baos, mimeType, params)
+		baos.toByteArray()
+	}
 	
 	// PNG methods
 
@@ -77,6 +86,14 @@ class Barcode4jService {
 
 	boolean png(String generatorName, String msg, HttpServletResponse response, Map params = [:]) {
 		render(generatorName, msg, response, pngMimeType, params)
+	}
+
+	byte[] png(String generatorName, String msg, Map params = [:]) {
+		render(generatorName, msg, pngMimeType, params)
+	}
+
+	byte[] png(BarcodeGenerator generator, String msg, Map params = [:]) {
+		render(generator, msg, pngMimeType, params)
 	}
 
 
@@ -98,6 +115,14 @@ class Barcode4jService {
 		render(generatorName, msg, response, jpegMimeType, params)
 	}
 	
+	byte[] jpeg(String generatorName, String msg, Map params = [:]) {
+		render(generatorName, msg, jpegMimeType, params)
+	}
+
+	byte[] jpeg(BarcodeGenerator generator, String msg, Map params = [:]) {
+		render(generator, msg, jpegMimeType, params)
+	}
+	
 	
 	// GIF Methods
 	
@@ -115,6 +140,14 @@ class Barcode4jService {
 
 	boolean gif(String generatorName, String msg, HttpServletResponse response, Map params = [:]) {
 		render(generatorName, msg, response, gifMimeType, params)
+	}
+	
+	byte[] gif(String generatorName, String msg, Map params = [:]) {
+		render(generatorName, msg, gifMimeType, params)
+	}
+
+	byte[] gif(BarcodeGenerator generator, String msg, Map params = [:]) {
+		render(generator, msg, gifMimeType, params)
 	}
 	
 	
