@@ -35,7 +35,7 @@ grails.project.dependency.resolution = {
 	}
 
 	dependencies {
-		compile('net.sf.barcode4j:barcode4j-light:2.0') {
+		compile('net.sf.barcode4j:barcode4j:2.1') {
 			excludes 'xalan'
 			excludes 'xml-apis'
 		}
