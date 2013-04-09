@@ -1,4 +1,4 @@
-This plugin integrates the well established [Barcode4j](http://barcode4j.sourceforge.net/ "Welcome to Barcode4J") library to provide convenient generation of barcodes. The version of Barcode4j that is used is 2.0.
+This plugin integrates the well established [Barcode4j](http://barcode4j.sourceforge.net/ "Welcome to Barcode4J") library to provide convenient generation of barcodes. The version of Barcode4j that is used is 2.1.
 
 ## How it works
 
