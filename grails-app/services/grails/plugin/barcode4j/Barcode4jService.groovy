@@ -26,7 +26,7 @@ class Barcode4jService {
 	
 	def grailsApplication
 	
-	int defaultDpi = 150
+	int defaultDpi = 300
 	int defaultImageType = BufferedImage.TYPE_BYTE_BINARY
 	boolean defaultAntiAlias = false
 	int defaultOrientation = 0
