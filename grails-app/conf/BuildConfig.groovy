@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
+grails.servlet.version = "2.5"
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
+grails.project.target.level = 1.6
+grails.project.source.level = 1.6
+
 grails.project.dependency.resolution = {
 	inherits("global")
 	log "warn"
 
 	repositories {
-		grailsPlugins()
-		grailsHome()
-		mavenLocal()
-		mavenCentral()
-		
-		try {
-			grailsCentral()
-		} catch (MissingMethodException e) {
-			// ignore, pre Grails 1.3
-		}
+        inherits true
+        grailsPlugins()
+        grailsHome()
+        grailsCentral()
+        mavenLocal()
+        mavenCentral()
 	}
 
 	dependencies {
@@ -42,8 +42,17 @@ grails.project.dependency.resolution = {
 	}
 	
 	plugins {
-		test(':spock:0.5-groovy-1.7-SNAPSHOT') {
+		compile ":hibernate:$grailsVersion", ":tomcat:$grailsVersion", {
+			export = false
+		}
+		build ":release:2.0.4", {
+            export = false
+            exclude "groovy"
+        }
+		test ':spock:0.7', {
 			export = false
 		}
 	}
 }
+
+grails.release.scm.enabled = false

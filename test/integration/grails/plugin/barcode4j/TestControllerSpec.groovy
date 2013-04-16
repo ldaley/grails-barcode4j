@@ -23,29 +23,19 @@ import spock.lang.*
  * This actually exercises most of the code in the barcode4j service, as well as tests
  * the controller method support and support for reloading.
  */
-class ControllerReloadingSpec extends IntegrationSpec {
+class TestControllerSpec extends IntegrationSpec {
 
 	def grailsApplication
 	
-	@Unroll("rendering #action works from controllers and survives a reload")
-	def supportReloadingControllerClasses() {
+	@Unroll
+	def "rendering #action works from controllers"() {
 		when:
 		def controller = createController()
 		controller."$action"()
 
 		then:
 		notThrown(MissingMethodException)
-
-		when:
-		PluginManagerHolder.pluginManager.informOfClassChange(reloadControllerClass())
-		controller = createController()
-
-		and:
-		controller."$action"()
-
-		then:
-		notThrown(MissingMethodException)
-
+		
 		where:
 		action << ['gif', 'png', 'jpeg', 'gifBean', 'pngBean', 'jpegBean']
 	}
@@ -54,8 +44,4 @@ class ControllerReloadingSpec extends IntegrationSpec {
 		grailsApplication.mainContext['grails.plugin.barcode4j.test.TestController']
 	}
 	
-	protected reloadControllerClass() {
-		grailsApplication.classLoader.reloadClass('grails.plugin.barcode4j.test.TestController')
-	}
-
 }
